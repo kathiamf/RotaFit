@@ -23,7 +23,7 @@ O pedido inicial foi implementar do zero o RotaFit na raiz do workspace, seguind
 - `npx expo install` para dependências compatíveis com o SDK Expo instalado; `npm install` para bibliotecas JS; `npm install -D` para Jest, Prettier e PGlite; `npx expo install --fix`.
 - `npm run typecheck`, `npm run test:app`, `npm run test:db`, `npm test` e `npx expo-doctor`.
 - `npm run format` (verificação final registrada abaixo).
-- `git status`, `git log` e `git remote -v` para inspecionar estado e destino Git.
+- `git status`, `git log`, `git remote -v`, `git add .`, `git commit`, `git branch -M main`, `git remote add origin` e `git push -u origin main`.
 - O PDF foi extraído localmente para consulta de suas etapas e códigos. Não foram enviados código ou credenciais a serviços externos.
 
 Não houve prompts adicionais de terceiros nem foram configuradas credenciais reais. Os comandos listados acima são os comandos de desenvolvimento/validação efetivamente usados; não houve fluxo de IA separado por etapa.
@@ -56,4 +56,4 @@ Resultados verificados após as correções:
 - `npm run format`: concluído; Prettier formatou arquivos das rotas, componentes, hooks, serviços e testes.
 - `npx expo export --platform android`: bundle Android concluído (1.492 módulos), usando apenas valores temporários de exemplo nas variáveis do processo; nenhum segredo real foi usado. O diretório `dist/` resultante foi removido após a validação.
 
-O `.env` não foi criado nem versionado. A publicação GitHub foi solicitada e será tentada após a confirmação do estado limpo de `.env`; o resultado de rede/autenticação não altera os resultados de compilação e testes acima.
+O `.env` não existe no workspace, a regra `.env` do `.gitignore` foi confirmada e nenhum `.env` está versionado. O repositório já havia sido inicializado pelo scaffold Expo; o commit `4696679` (`RotaFit: corrida com GPS, Liquid Glass e Spotify`) foi criado na branch `main` e enviado com sucesso para `origin/main` em `https://github.com/kathiamf/RotaFit`.
